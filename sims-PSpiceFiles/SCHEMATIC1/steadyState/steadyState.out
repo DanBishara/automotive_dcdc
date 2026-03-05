@@ -1,0 +1,1146 @@
+
+**** 03/05/26 00:03:30 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-steadyState"  [ c:\users\wfe\documents\automotive_dcdc\sims-pspicefiles\schematic1\steadystate.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "steadyState.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\cds_spb_home\cdssetup\OrCAD_PSpiceTIPSpice_Install\23.1.0\PSpice.ini file:
+.lib "nom_pspti.lib" 
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 1s 0 
+.OPTIONS ADVCONV
+.OPTIONS FILEMODELSEARCH
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source SIMS
+X_U1         GND COMP COMP N03223 N02929 VDDA DITH VIN VIN GND FB GND HB1 HB2
++  N01672 N02317 N01696 N02332 N01761 N01778 N01761 N01778 VDDA N06018 N06031 GND
++  GND N01820 N01583 SS SS SW1 SW2 N06051 VCC VCC VOUT VDDA VIN VOUT VOUT
++  LM5143_TRANS PARAMS: MODE=0
+C_C1         SS GND  120n  TC=0,0 
+C_C2         GND DITH  1n  TC=0,0 
+C_C3         VDDA GND  1n  TC=0,0 
+R_R1         FB VOUT  215k TC=0,0 
+R_R2         GND FB  11.3k TC=0,0 
+C_C4         SW1 HB1  0.1u  TC=0,0 
+R_R3         GND N01583  140k TC=0,0 
+C_C5         HB2 SW2  0.1u  TC=0,0 
+R_R4         N01696 N01672  1 TC=0,0 
+C_C6         GND N01820  0.22u  TC=0,0 
+D_D1         VCC HB1 Dbreak 
+D_D2         VCC HB2 Dbreak 
+R_R5         N02317 N02332  1 TC=0,0 
+M_M1         VIN N01696 SW1 SW1 power_Mbreakn           
+M_M2         SW1 N01761 GND GND power_Mbreakn           
+M_M3         VIN N02332 SW2 SW2 power_Mbreakn           
+M_M4         SW2 N01778 GND GND power_Mbreakn           
+L_L1         SW2 N02929  0.59u  
+R_R6         N02929 VOUT  2.7m TC=0,0 
+R_R7         N03223 VOUT  2.7m TC=0,0 
+L_L2         SW1 N03223  0.59u  
+C_C7         GND VCC  4.4u  TC=0,0 
+C_C8         VIN GND  12u  TC=0,0 
+C_C9         GND VOUT  220u  TC=0,0 
+R_R8         N05200 COMP  17.4k TC=0,0 
+C_C10         GND N05200  4.7n  TC=0,0 
+C_C11         GND COMP  150p  TC=0,0 
+R_R9         0 N06018  1G TC=0,0 
+R_R10         N06031 0  1G TC=0,0 
+R_R11         0 N06051  1G TC=0,0 
+R_R12         GND DITH  1k TC=0,0 
+R_R13         GND VOUT  400m TC=0,0 
+
+**** RESUMING steadyState.cir ****
+.END
+
+**** 03/05/26 00:03:30 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-steadyState"  [ c:\users\wfe\documents\automotive_dcdc\sims-pspicefiles\schematic1\steadystate.sim ] 
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               power_Mbreakn   
+               NMOS            
+       LEVEL    3            
+           L    1.000000E-06 
+           W    1            
+         VTO    3            
+          KP   20.718860E-06 
+       GAMMA    0            
+         PHI     .6          
+      LAMBDA    0            
+          RD     .1          
+          RS     .01         
+          RG     .5          
+         RDS    1.000000E+06 
+          IS   10.000000E-15 
+          JS    0            
+          PB     .8          
+        PBSW     .8          
+         CBD    1.000000E-09 
+          CJ    0            
+        CJSW    0            
+          TT    1.000000E-09 
+        CGSO    1.000000E-09 
+        CGDO  100.000000E-12 
+        CGBO    0            
+         TOX  100.000000E-09 
+          XJ    0            
+       UCRIT   10.000000E+03 
+      DIOMOD    1            
+         VFB    0            
+        LETA    0            
+        WETA    0            
+          U0    0            
+        TEMP    0            
+         VDD    5            
+       XPART    0            
+
+
+**** 03/05/26 00:03:30 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-steadyState"  [ c:\users\wfe\documents\automotive_dcdc\sims-pspicefiles\schematic1\steadystate.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   FB)-20.38E-27  (   SS) 189.4E-12  (  GND)-3.252E-30  (  HB1)-1.627E-21      
+
+(  HB2)-1.627E-21  (  SW1)-409.4E-27  (  SW2)-409.4E-27  (  VCC) 1.627E-30      
+
+(  VIN)-824.8E-27  ( COMP) 6.622E-09  ( DITH)-3.252E-30  ( VDDA)    0.0000      
+
+( VOUT)-408.1E-27  (N01583)    0.0000 (N01672)-411.2E-27 (N01696)-409.6E-27     
+
+(N01761)-3.252E-30 (N01778)-3.252E-30 (N01820)-56.73E-21 (N02317)-411.2E-27     
+
+(N02332)-409.6E-27 (N02929)-409.4E-27 (N03223)-409.4E-27 (N05200) 6.622E-09     
+
+(N06018)    0.0000 (N06031)    0.0000 (N06051)    0.0000 (X_U1.DN)    0.0000    
+
+(X_U1.UP)    0.0000                   (X_U1.CLK)    0.0000                      
+
+(X_U1.CLK2)    0.0000                 (X_U1.FPWM)    0.0000                     
+
+(X_U1.OVP1)    0.0000                 (X_U1.OVP2)    0.0000                     
+
+(X_U1.PH11)    0.0000                 (X_U1.PH12)    0.0000                     
+
+(X_U1.PH21)    1.0000                 (X_U1.PH22)    1.0000                     
+
+(X_U1.CLKD1)    0.0000                (X_U1.CLKD2)    0.0000                    
+
+(X_U1.CLKFB)    0.0000                (X_U1.ILIM1)    0.0000                    
+
+(X_U1.ILIM2)    0.0000                (X_U1.ISWH1)     .3000                    
+
+(X_U1.ISWH2)     .3000                (X_U1.SDWN1)    1.0000                    
+
+(X_U1.SDWN2)    1.0000                (X_U1.VFBI1)-48.96E-27                    
+
+(X_U1.VFBI2)-48.96E-27                (X_U1.VREF1) 189.4E-12                    
+
+(X_U1.VREF2) 189.4E-12                (X_U1.CLKREF)    1.0000                   
+
+(X_U1.N73189)    0.0000               (X_U1.N75844)    0.0000                   
+
+(X_U1.NORMAL)    1.0000               (X_U1.U10_PG)    1.0000                   
+
+(X_U1.U13_PG)    1.0000               (X_U1.U19_VC)     .2318                   
+
+(X_U1.U4_ZCD)    0.0000               (X_U1.U4_ZTH)    0.0000                   
+
+(X_U1.U7_VCC)    0.0000               (X_U1.HICCUP1)    0.0000                  
+
+(X_U1.HICCUP2)    0.0000              (X_U1.ISLOPE1) 210.7E-09                  
+
+(X_U1.ISLOPE2) 210.7E-09              (X_U1.N148020)    1.0000                  
+
+(X_U1.N187506)    1.0000              (X_U1.PLL_DIS)    1.0000                  
+
+(X_U1.U10_UVP)    1.0000              (X_U1.U13_UVP)    1.0000                  
+
+(X_U1.U14_ZCD)    0.0000              (X_U1.U14_ZTH)    0.0000                  
+
+(X_U1.U19_VCI)     .0050              (X_U1.U4_LDRV)    0.0000                  
+
+(X_U1.VINOK_B)    1.0000              (X_U1.CLK_SYNC)    0.0000                 
+
+(X_U1.H_BLNCK1)    0.0000             (X_U1.H_BLNCK2)    0.0000                 
+
+(X_U1.L_BLNCK1)    1.0000             (X_U1.L_BLNCK2)    1.0000                 
+
+(X_U1.U14_LDRV)    0.0000             (X_U1.U18_TONE)    0.0000                 
+
+(X_U1.U2_DISCH)    1.0000             (X_U1.U5_H_END)    0.0000                 
+
+(X_U1.UCLK1_SR)    1.0000             (X_U1.UCLK2_SR)    1.0000                 
+
+(X_U1.N16669093)    1.0000            (X_U1.N16682465)    1.0000                
+
+(X_U1.N16783791)    2.0000            (X_U1.N16807997)    1.0000                
+
+(X_U1.N16811359)    0.0000            (X_U1.N16816902) 4.616E-06                
+
+(X_U1.N16824422)    1.0000            (X_U1.N16886382)    1.0000                
+
+(X_U1.N16916404)    1.0000            (X_U1.PGOOD_EN1)    1.0000                
+
+(X_U1.PGOOD_EN2)    1.0000            (X_U1.U10_OVP_N)    1.0000                
+
+(X_U1.U10_UVP_N)    0.0000            (X_U1.U11_DISCH)    1.0000                
+
+(X_U1.U13_OVP_N)    1.0000            (X_U1.U13_UVP_N)    0.0000                
+
+(X_U1.U18_QB_DN)    1.0000            (X_U1.U18_QB_UP)    1.0000                
+
+(X_U1.U18_QCLK1)    0.0000            (X_U1.U18_QCLK2)    1.0000                
+
+(X_U1.U2_N25555)    0.0000            (X_U1.U2_N67870)-74.18E-27                
+
+(X_U1.U2_N67984)    -.2500            (X_U1.U2_N68066)-48.96E-27                
+
+(X_U1.U2_N71046) 1.000E-06            (X_U1.U2_N72189)    1.0000                
+
+(X_U1.U2_N95734)    0.0000            (X_U1.U4_N08357) 2.665E-30                
+
+(X_U1.U4_N08485)    1.0000            (X_U1.U4_N08737)    1.0000                
+
+(X_U1.U4_N09129)    0.0000            (X_U1.U4_N09375)    0.0000                
+
+(X_U1.U4_N09637)    0.0000            (X_U1.U4_N70409)    0.0000                
+
+(X_U1.U4_N85373)    0.0000            (X_U1.U4_N86437)    1.0000                
+
+(X_U1.U5_COUNT1)    0.0000            (X_U1.U5_COUNT2)    0.0000                
+
+(X_U1.U7_EN_OK1)    0.0000            (X_U1.U7_EN_OK2)    0.0000                
+
+(X_U1.U7_VCC_OK)    0.0000            (X_U1.U7_VIN_OK)    0.0000                
+
+(X_U1.UCLK1_VC1) 1.143E-15            (X_U1.UCLK1_VC2) 571.5E-18                
+
+(X_U1.UCLK2_VC1)-384.6E-12            (X_U1.UCLK2_VC2) 571.5E-18                
+
+(X_U1.VOUT1_3P3)    1.0000            (X_U1.U10_GLITCH)    1.0000               
+
+(X_U1.U10_TDELAY)    1.0000           (X_U1.U10_TONMIN)    1.0000               
+
+(X_U1.U11_N17872)    1.0000           (X_U1.U11_N37577)    0.0000               
+
+(X_U1.U11_N75584)-74.18E-27           (X_U1.U11_N75696)    -.2500               
+
+(X_U1.U11_N75748)-48.96E-27           (X_U1.U11_N75810) 1.000E-06               
+
+(X_U1.U11_N75836)    1.0000           (X_U1.U11_N96216)    0.0000               
+
+(X_U1.U13_GLITCH)    1.0000           (X_U1.U13_TDELAY)    1.0000               
+
+(X_U1.U13_TONMIN)    1.0000           (X_U1.U14_N08357) 2.665E-30               
+
+(X_U1.U14_N08485)    1.0000           (X_U1.U14_N08737)    1.0000               
+
+(X_U1.U14_N09129)    0.0000           (X_U1.U14_N09375)    0.0000               
+
+(X_U1.U14_N09637)    0.0000           (X_U1.U14_N70409)    0.0000               
+
+(X_U1.U14_N85373)    0.0000           (X_U1.U14_N86437)    1.0000               
+
+(X_U1.U18_PLL_EN)    0.0000           (X_U1.U19_VDDBY2)    2.5000               
+
+(X_U1.U4_N152364)    1.0000           (X_U1.U5_N107511)    0.0000               
+
+(X_U1.U5_N107542)    -.2500           (X_U1.U5_N107559)    0.0000               
+
+(X_U1.U5_N107566)    0.0000           (X_U1.U5_N133651)    1.0000               
+
+(X_U1.U5_N133661)    0.0000           (X_U1.U5_N146142)    0.0000               
+
+(X_U1.U7_ENOK_B1)    1.0000           (X_U1.U7_ENOK_B2)    1.0000               
+
+(X_U1.U7_VCCOK_B)    1.0000           (X_U1.U7_VCCX_OK)    0.0000               
+
+(X_U1.UCLK1_VDC3)    3.0000           (X_U1.UCLK1_VREF)    1.2000               
+
+(X_U1.UCLK2_VDC3)    3.0000           (X_U1.UCLK2_VREF)    1.2000               
+
+(X_U1.ULTRA_LOW1)    0.0000           (X_U1.ULTRA_LOW2)    0.0000               
+
+(X_U1.CLK_INT_DIS)    0.0000          (X_U1.INTERLEAVED)    0.0000              
+
+(X_U1.SSCOMPLETE1)    0.0000          (X_U1.SSCOMPLETE2)    0.0000              
+
+(X_U1.TIME_PERIOD)    0.0000          (X_U1.U14_N152364)    1.0000              
+
+(X_U1.U18_CLK1_PE)    1.0000          (X_U1.U18_CLK2_PE)    0.0000              
+
+(X_U1.U18_N183829)    0.0000          (X_U1.U18_N183909)    1.0000              
+
+(X_U1.U18_N184201)    1.0000          (X_U1.U18_N184319)    1.0000              
+
+(X_U1.U18_N184411)    1.0000          (X_U1.U18_N184513)    1.0000              
+
+(X_U1.U18_N187036)   32.0000          (X_U1.U18_N187496)    0.0000              
+
+(X_U1.U18_N187548)    0.0000          (X_U1.U18_RESET_B)    0.0000              
+
+(X_U1.U19_N163174) 99.80E-12          (X_U1.U4_LDRV_INT)    0.0000              
+
+(X_U1.U5_I_PULSE1)    0.0000          (X_U1.U5_I_PULSE2)    0.0000              
+
+(X_U1.U98_RT_FREQ) 100.0E+03          (X_U1.UCLK1_RAMP1)    3.0000              
+
+(X_U1.UCLK1_VREF2)    2.5000          (X_U1.UCLK2_RAMP1)    3.0000              
+
+(X_U1.UCLK2_VREF2)    2.5000          (X_U1.UDRV1_PH1_1)    0.0000              
+
+(X_U1.UDRV1_PH2_1)    1.0000          (X_U1.UDRV2_PH1_1)    0.0000              
+
+(X_U1.UDRV2_PH2_1)    1.0000          (X_U1.X_U4_U693.1)    0.0000              
+
+(X_U1.X_U7_U613.1)    0.0000          (X_U1.X_U7_U614.1)    0.0000              
+
+(X_U1.X_U7_U615.1)    0.0000          (X_U1.X_U7_U620.1)    0.0000              
+
+(X_U1.X_U7_U627.1)    0.0000          (X_U1.U14_LDRV_INT)    0.0000             
+
+(X_U1.U2_N16784744)    0.0000         (X_U1.U2_N16784762)     .1250             
+
+(X_U1.U2_N16785529)    1.0000         (X_U1.U2_N16785551)-48.96E-27             
+
+(X_U1.U4_LDRV_INTB)    1.0000         (X_U1.U4_N16790065)     .3000             
+
+(X_U1.U4_N16837589)    0.0000         (X_U1.U4_N16837627)    1.0000             
+
+(X_U1.U4_N16877418)    1.0000         (X_U1.U4_N16902652)     .3000             
+
+(X_U1.U4_N16914282) 1.000E-06         (X_U1.U4_N16922955)    1.0000             
+
+(X_U1.U4_N16923004)    1.0000         (X_U1.U5_HICCUP1_N)    1.0000             
+
+(X_U1.U5_HICCUP2_N)    1.0000         (X_U1.U5_N16630382)    0.0000             
+
+(X_U1.U5_N16648145)    0.0000         (X_U1.U5_N16652648)    0.0000             
+
+(X_U1.U5_N16652652)    0.0000         (X_U1.U5_N16652662)  512.0000             
+
+(X_U1.U5_N16652718)    0.0000         (X_U1.U5_N16652752)    1.0000             
+
+(X_U1.U5_N16652904)    0.0000         (X_U1.U5_N16661334)    0.0000             
+
+(X_U1.U5_N16662055) 20.00E-15         (X_U1.U5_N16662059)    5.0000             
+
+(X_U1.U5_N16664681)    0.0000         (X_U1.U5_N16665826)    4.0000             
+
+(X_U1.U5_N16679698)    0.0000         (X_U1.U5_N16682119) 20.00E-15             
+
+(X_U1.U5_N16682177)    0.0000         (X_U1.U5_N16682213)    0.0000             
+
+(X_U1.U5_N16682227)    5.0000         (X_U1.U5_N16682325)    0.0000             
+
+(X_U1.U5_N16682357)    4.0000         (X_U1.U5_N16683669)    0.0000             
+
+(X_U1.U5_N16777867)    0.0000         (X_U1.U5_N16777884)  512.0000             
+
+(X_U1.U5_N16777933)    0.0000         (X_U1.U5_N16777952)    0.0000             
+
+(X_U1.U5_N16778004)    1.2000         (X_U1.U5_N16778062)    0.0000             
+
+(X_U1.U5_N16864724)    1.0000         (X_U1.U5_U3_N04955)    0.0000             
+
+(X_U1.U5_U4_N04955)    0.0000         (X_U1.U7_N16734802)     .0900             
+
+(X_U1.U7_N16734846)    3.2000         (X_U1.U7_N16735008)    1.2000             
+
+(X_U1.U7_N16735086)    2.0000         (X_U1.U7_N16735276)     .0900             
+
+(X_U1.U7_N16735320)    3.3000         (X_U1.U7_N16735430)    4.3000             
+
+(X_U1.U7_N16735502)     .2000         (X_U1.U7_N16735566)-824.8E-27             
+
+(X_U1.U7_N16747479)    1.2000         (X_U1.U7_N16747493)    2.0000             
+
+(X_U1.U7_N16772254)    0.0000         (X_U1.U7_N16781951) 32.44E-24             
+
+(X_U1.U7_N16784507) 32.44E-24         (X_U1.UCLK1_ENSYNC)    0.0000             
+
+(X_U1.X_U10_U613.1)    1.0000         (X_U1.X_U10_U614.1)    1.0000             
+
+(X_U1.X_U13_U613.1)    1.0000         (X_U1.X_U13_U614.1)    1.0000             
+
+(X_U1.X_U14_U693.1)    0.0000         (X_U1.X_U2_U3.YINT)    1.0000             
+
+(X_U1.X_U2_U5.YINT)    0.0000         (X_U1.X_U2_U6.YINT)    0.0000             
+
+(X_U1.X_U5_U30.my5)    1.0000         (X_U1.X_U5_U30.qbr)    1.0000             
+
+(X_U1.X_U5_U30.qqq) 2.002E-15         (X_U1.X_U5_U31.my5)    1.0000             
+
+(X_U1.X_U5_U31.qbr)    1.0000         (X_U1.X_U5_U31.qqq) 2.002E-15             
+
+(X_U1.X_U5_U639.ch)    0.0000         (X_U1.X_U5_U642.ch)    0.0000             
+
+(X_U1.X_U98_U676.1)    0.0000         (X_U1.U10_N16625533)     .0204            
+
+(X_U1.U10_N16626981)     .0204        (X_U1.U10_N16627165)     .6600            
+
+(X_U1.U10_N16787180)     .5520        (X_U1.U10_N16799779)    0.0000            
+
+(X_U1.U10_N16803363)    0.0000        (X_U1.U10_N16805765)    1.0000            
+
+(X_U1.U10_U1_N02680)    1.0000        (X_U1.U10_U2_N00140)    1.0000            
+
+(X_U1.U10_U2_N00220)    0.0000        (X_U1.U10_U2_N00780)    1.0000            
+
+(X_U1.U10_U2_N02470)    1.0000        (X_U1.U10_U2_N03610)    0.0000            
+
+(X_U1.U10_U3_N04955)    0.0000        (X_U1.U11_CHOOSE3P3)    1.0000            
+
+(X_U1.U11_N16784744)    0.0000        (X_U1.U11_N16784762)     .1250            
+
+(X_U1.U11_N16785549)-48.96E-27        (X_U1.U13_N16625533)     .0204            
+
+(X_U1.U13_N16626981)     .0204        (X_U1.U13_N16627165)     .6600            
+
+(X_U1.U13_N16787180)     .5520        (X_U1.U13_N16799779)    0.0000            
+
+(X_U1.U13_N16803363)    0.0000        (X_U1.U13_N16805765)    1.0000            
+
+(X_U1.U13_U1_N02680)    1.0000        (X_U1.U13_U2_N00140)    1.0000            
+
+(X_U1.U13_U2_N00220)    0.0000        (X_U1.U13_U2_N00780)    1.0000            
+
+(X_U1.U13_U2_N02470)    1.0000        (X_U1.U13_U2_N03610)    0.0000            
+
+(X_U1.U13_U3_N04955)    0.0000        (X_U1.U14_LDRV_INTB)    1.0000            
+
+(X_U1.U14_N16790065)     .3000        (X_U1.U14_N16837589)    0.0000            
+
+(X_U1.U14_N16837627)    1.0000        (X_U1.U14_N16877418)    1.0000            
+
+(X_U1.U14_N16902652)     .3000        (X_U1.U14_N16914282) 1.000E-06            
+
+(X_U1.U14_N16922955)    1.0000        (X_U1.U14_N16923004)    1.0000            
+
+(X_U1.U18_DISCHARGE)    1.0000        (X_U1.U18_PLL_COUNT) 64.00E-12            
+
+(X_U1.U2_ADJ_DETECT)    0.0000        (X_U1.U2_CHOOSE_ADJ)-74.18E-27            
+
+(X_U1.U97_N16773228)   16.0000        (X_U1.U97_N16779114)   16.0000            
+
+(X_U1.U97_N16785670)    0.0000        (X_U1.U97_N16786708)    1.0000            
+
+(X_U1.U97_N16788036)    0.0000        (X_U1.U97_ULTRA_LOW)    0.0000            
+
+(X_U1.U98_N16769147)    2.0000        (X_U1.U98_N16769333)    1.2000            
+
+(X_U1.U98_N16776010) 4.802E-15        (X_U1.U98_N16776592)    1.2000            
+
+(X_U1.U98_N16777841) 380.9E-30        (X_U1.U98_N16783053) 120.0E+03            
+
+(X_U1.U98_N16784765) 80.00E+03        (X_U1.U98_N16785649)    0.0000            
+
+(X_U1.U98_N16785854)    1.0000        (X_U1.U98_N16804679)    0.0000            
+
+(X_U1.U98_N16804691)     .0200        (X_U1.U98_N16804696)    0.0000            
+
+(X_U1.U98_N16807781)    0.0000        (X_U1.U98_SYNC_FREQ) 3.000E+06            
+
+(X_U1.U99_N16774936)    0.0000        (X_U1.UCLK1_CLK_INT)    0.0000            
+
+(X_U1.UCLK1_FAKEPWM)    0.0000        (X_U1.UCLK1_N105129) 3.580E-30            
+
+(X_U1.UCLK1_N105603)    0.0000        (X_U1.UCLK1_N142689)    1.0000            
+
+(X_U1.UCLK1_N142694)    1.0000        (X_U1.UCLK1_N143410)    0.0000            
+
+(X_U1.UCLK1_N148013)    1.0000        (X_U1.UCLK1_TIMEBY4)    0.0000            
+
+(X_U1.UCLK2_CLK_INT)    0.0000        (X_U1.UCLK2_FAKEPWM)    0.0000            
+
+(X_U1.UCLK2_N105129) 3.580E-30        (X_U1.UCLK2_N105603)    0.0000            
+
+(X_U1.UCLK2_N142689)    1.0000        (X_U1.UCLK2_N142694)    1.0000            
+
+(X_U1.UCLK2_TIMEBY4)    0.0000        (X_U1.UDRV1_PREBIAS)    1.0000            
+
+(X_U1.UDRV2_PREBIAS)    1.0000        (X_U1.UEA2_COMP_INT) 6.622E-09            
+
+(X_U1.X_U11_U3.YINT)    1.0000        (X_U1.X_U11_U5.YINT)    0.0000            
+
+(X_U1.X_U11_U6.YINT)    0.0000        (X_U1.X_U18_U1.YINT)    0.0000            
+
+(X_U1.X_U18_U143.ch)    0.0000        (X_U1.X_U18_U2.YINT)    1.0000            
+
+(X_U1.X_U18_U3.YINT)    1.0000        (X_U1.X_U18_U4.YINT)    1.0000            
+
+(X_U1.X_U18_U5.YINT)    1.0000        (X_U1.X_U18_U6.YINT)    0.0000            
+
+(X_U1.X_U18_U7.YINT)    1.0000        (X_U1.X_U18_U8.YINT)    1.0000            
+
+(X_U1.X_U18_U9.YINT)    1.0000        (X_U1.X_U2_U634.my5)    1.0000            
+
+(X_U1.X_U2_U634.qbr)    1.0000        (X_U1.X_U2_U634.qqq)    -.0100            
+
+(X_U1.X_U4_U690.my5)    1.0000        (X_U1.X_U4_U690.qbr)    1.0000            
+
+(X_U1.X_U4_U690.qqq)     .0100        (X_U1.X_U5_U30.qint) 2.002E-15            
+
+(X_U1.X_U5_U31.qint) 2.002E-15        (X_U1.X_U5_U640.my5)    1.0000            
+
+(X_U1.X_U5_U640.qbr)    1.0000        (X_U1.X_U5_U640.qqq) 2.002E-15            
+
+(X_U1.X_U5_U641.my5)    1.0000        (X_U1.X_U5_U641.qbr)    1.0000            
+
+(X_U1.X_U5_U641.qqq) 2.002E-15        (X_U1.X_U97_U1.Yint)    0.0000            
+
+(X_U1.X_U97_U2.Yint)    0.0000        (X_U1.X_U97_U4.YINT)    0.0000            
+
+(X_U1.X_U97_U5.YINT)    0.0000        (X_U1.X_U97_U6.YINT)    0.0000            
+
+(X_U1.X_U97_U7.YINT)    0.0000        (X_U1.X_U97_U8.YINT)    1.0000            
+
+(X_U1.X_U98_U143.ch)    0.0000        (X_U1.U11_ADJ_DETECT)    0.0000           
+
+(X_U1.U11_CHOOSE_ADJ)-74.18E-27       (X_U1.U4_L_BLNCK_DCM)    1.0000           
+
+(X_U1.UCLK1_SLOPE_CH)    0.0000       (X_U1.UCLK2_SLOPE_CH)    0.0000           
+
+(X_U1.UDRV1_CSASLOPE)     .3000       (X_U1.UDRV2_CSASLOPE)     .3000           
+
+(X_U1.UEA1_N16743331)    2.0000       (X_U1.UEA1_N16743581)    1.0000           
+
+(X_U1.UEA1_N16743799)    -.0200       (X_U1.UEA2_N16743331)    2.0000           
+
+(X_U1.UEA2_N16743581)    1.0000       (X_U1.UEA2_N16743799)    -.0200           
+
+(X_U1.X_U11_U634.my5)    1.0000       (X_U1.X_U11_U634.qbr)    1.0000           
+
+(X_U1.X_U11_U634.qqq)    -.0100       (X_U1.X_U14_U690.my5)    1.0000           
+
+(X_U1.X_U14_U690.qbr)    1.0000       (X_U1.X_U14_U690.qqq)     .0100           
+
+(X_U1.X_U18_U144.my5)    1.0000       (X_U1.X_U18_U144.qbr)    1.0000           
+
+(X_U1.X_U18_U144.qqq)    -.0100       (X_U1.X_U18_U22.YINT)    0.0000           
+
+(X_U1.X_U18_U23.YINT)    1.0000       (X_U1.X_U18_U24.YINT)    1.0000           
+
+(X_U1.X_U18_U25.YINT)    1.0000       (X_U1.X_U18_U28.YINT)    1.0000           
+
+(X_U1.X_U2_U626.YINT)-74.18E-27       (X_U1.X_U2_U627.Yint)    1.0000           
+
+(X_U1.X_U2_U630.YINT)-48.96E-27       (X_U1.X_U2_U631.Yint)    0.0000           
+
+(X_U1.X_U2_U633.Yint)    0.0000       (X_U1.X_U2_U634.qint)    -.0100           
+
+(X_U1.X_U4_U612.YINT)    0.0000       (X_U1.X_U4_U613.YINT)    1.0000           
+
+(X_U1.X_U4_U648.YINT)    1.0000       (X_U1.X_U4_U650.YINT)    1.0000           
+
+(X_U1.X_U4_U651.YINT)    0.0000       (X_U1.X_U4_U652.YINT)    0.0000           
+
+(X_U1.X_U4_U653.YINT)    0.0000       (X_U1.X_U4_U655.YINT)    1.0000           
+
+(X_U1.X_U4_U657.YINT)    1.0000       (X_U1.X_U4_U685.YINT)    1.0000           
+
+(X_U1.X_U4_U687.YINT)    0.0000       (X_U1.X_U4_U688.YINT)    1.0000           
+
+(X_U1.X_U4_U690.qint)     .0100       (X_U1.X_U4_U691.YINT)    0.0000           
+
+(X_U1.X_U4_U692.YINT)    0.0000       (X_U1.X_U4_U693.INM1) 409.4E-27           
+
+(X_U1.X_U4_U693.INP1)    0.0000       (X_U1.X_U4_U693.INP2)    0.0000           
+
+(X_U1.X_U5_U30.myvss)    0.0000       (X_U1.X_U5_U30.qqqd1)    0.0000           
+
+(X_U1.X_U5_U31.myvss)    0.0000       (X_U1.X_U5_U31.qqqd1)    0.0000           
+
+(X_U1.X_U5_U608.YINT)    0.0000       (X_U1.X_U5_U609.Yint)    0.0000           
+
+(X_U1.X_U5_U612.Yint)    0.0000       (X_U1.X_U5_U613.YINT)    0.0000           
+
+(X_U1.X_U5_U615.YINT)    0.0000       (X_U1.X_U5_U616.Yint)    0.0000           
+
+(X_U1.X_U5_U617.YINT)    0.0000       (X_U1.X_U5_U618.Yint)    0.0000           
+
+(X_U1.X_U5_U619.Yint)    0.0000       (X_U1.X_U5_U629.Yint)    0.0000           
+
+(X_U1.X_U5_U630.YINT)    0.0000       (X_U1.X_U5_U631.YINT)    0.0000           
+
+(X_U1.X_U5_U632.YINT)    0.0000       (X_U1.X_U5_U633.YINT)    0.0000           
+
+(X_U1.X_U5_U634.YINT)    0.0000       (X_U1.X_U5_U637.YINT)    0.0000           
+
+(X_U1.X_U5_U638.YINT)    0.0000       (X_U1.X_U5_U639.meas)    0.0000           
+
+(X_U1.X_U5_U640.qint) 2.002E-15       (X_U1.X_U5_U641.qint) 2.002E-15           
+
+(X_U1.X_U5_U642.meas)    0.0000       (X_U1.X_U7_U613.INM1)    3.2000           
+
+(X_U1.X_U7_U613.INP1)    0.0000       (X_U1.X_U7_U613.INP2)    0.0000           
+
+(X_U1.X_U7_U614.INM1)    2.0000       (X_U1.X_U7_U614.INP1)    0.0000           
+
+(X_U1.X_U7_U614.INP2)    0.0000       (X_U1.X_U7_U615.INM1)    3.3000           
+
+(X_U1.X_U7_U615.INP1)    0.0000       (X_U1.X_U7_U615.INP2)    0.0000           
+
+(X_U1.X_U7_U616.YINT)    1.0000       (X_U1.X_U7_U618.YINT)    1.0000           
+
+(X_U1.X_U7_U620.INM1)    4.3000       (X_U1.X_U7_U620.INP1)    0.0000           
+
+(X_U1.X_U7_U620.INP2)    0.0000       (X_U1.X_U7_U621.YINT)-824.8E-27           
+
+(X_U1.X_U7_U624.YINT)    1.0000       (X_U1.X_U7_U626.YINT)    0.0000           
+
+(X_U1.X_U7_U627.INM1)    2.0000       (X_U1.X_U7_U627.INP1)    0.0000           
+
+(X_U1.X_U7_U627.INP2)    0.0000       (X_U1.X_U7_U629.YINT)    1.0000           
+
+(X_U1.X_U7_U630.YINT)    1.0000       (X_U1.X_U7_U631.YINT)    1.0000           
+
+(X_U1.X_UDRV1_U848.1)    1.0000       (X_U1.X_UDRV2_U848.1)    1.0000           
+
+(X_U1.X_UEA1_U1.YINT)    1.0000       (X_U1.X_UEA2_U1.YINT)    1.0000           
+
+(X_U1.U14_L_BLNCK_DCM)    1.0000      (X_U1.U4_L_BLNCK_FPWM)    1.0000          
+
+(X_U1.U97_16PWM_RAMP1) 64.00E-15      (X_U1.U97_16PWM_RAMP2) 64.00E-15          
+
+(X_U1.UCLK1_CLKEXTEND)    0.0000      (X_U1.UCLK1_DISCHARGE)    0.0000          
+
+(X_U1.UCLK1_N16748920)    2.0000      (X_U1.UCLK1_N16748938)    0.0000          
+
+(X_U1.UCLK1_N16750120)    1.0000      (X_U1.UCLK1_N16802829)    0.0000          
+
+(X_U1.UCLK1_N16910733)    0.0000      (X_U1.UCLK1_N16913784)    1.0000          
+
+(X_U1.UCLK1_N16941463)    0.0000      (X_U1.UCLK1_N16941559)    1.0000          
+
+(X_U1.UCLK1_N16941562)    1.0000      (X_U1.UCLK2_CLKEXTEND)    0.0000          
+
+(X_U1.UCLK2_DISCHARGE)    0.0000      (X_U1.UCLK2_N16748920)    2.0000          
+
+(X_U1.UCLK2_N16748938)    0.0000      (X_U1.UCLK2_N16750120)    1.0000          
+
+(X_U1.UCLK2_N16778810)     .6000      (X_U1.UCLK2_N16780211)    0.0000          
+
+(X_U1.UCLK2_N16780801)     .6000      (X_U1.UCLK2_N16795843)    0.0000          
+
+(X_U1.UCLK2_N16796127)    0.0000      (X_U1.UCLK2_N16824360)    0.0000          
+
+(X_U1.UCLK2_N16824391)    0.0000      (X_U1.UCLK2_N16824411)    1.0000          
+
+(X_U1.UCLK2_N16833602)    0.0000      (X_U1.UCLK2_N16833698)    1.0000          
+
+(X_U1.UCLK2_N16833701)    1.0000      (X_U1.UDRV1_N16757820)    1.0000          
+
+(X_U1.UDRV1_N16757826)    1.0000      (X_U1.UDRV1_N16757852)    0.0000          
+
+(X_U1.UDRV1_N16758148)    1.0000      (X_U1.UDRV1_N16761308)-619.8E-30          
+
+(X_U1.UDRV1_N16761314)    0.0000      (X_U1.UDRV1_N16761336)    1.0000          
+
+(X_U1.UDRV1_N16762313)    0.0000      (X_U1.UDRV1_N16762321)    1.0000          
+
+(X_U1.UDRV1_N16764046)    1.0000      (X_U1.UDRV1_N16778236)     .3000          
+
+(X_U1.UDRV1_N16781726)    1.1760      (X_U1.UDRV1_N16805723)     .0010          
+
+(X_U1.UDRV1_N16812981)    1.0000      (X_U1.UDRV2_N16757820)    1.0000          
+
+(X_U1.UDRV2_N16757826)    1.0000      (X_U1.UDRV2_N16757852)    0.0000          
+
+(X_U1.UDRV2_N16758148)    1.0000      (X_U1.UDRV2_N16761308)-619.8E-30          
+
+(X_U1.UDRV2_N16761314)    0.0000      (X_U1.UDRV2_N16761336)    1.0000          
+
+(X_U1.UDRV2_N16762313)    0.0000      (X_U1.UDRV2_N16762321)    1.0000          
+
+(X_U1.UDRV2_N16764046)    1.0000      (X_U1.UDRV2_N16778236)     .3000          
+
+(X_U1.UDRV2_N16781726)    1.1760      (X_U1.UDRV2_N16805723)     .0010          
+
+(X_U1.UDRV2_N16812981)    1.0000      (X_U1.X_U10_U613.INM1)    -.5520          
+
+(X_U1.X_U10_U613.INP1)    0.0000      (X_U1.X_U10_U613.INP2)     .0204          
+
+(X_U1.X_U10_U614.INM1)    -.6600      (X_U1.X_U10_U614.INP1)    0.0000          
+
+(X_U1.X_U10_U614.INP2)     .0204      (X_U1.X_U10_U616.YINT)    0.0000          
+
+(X_U1.X_U10_U617.YINT)    0.0000      (X_U1.X_U10_U618.YINT)    1.0000          
+
+(X_U1.X_U11_U626.YINT)-74.18E-27      (X_U1.X_U11_U627.Yint)    1.0000          
+
+(X_U1.X_U11_U630.YINT)-48.96E-27      (X_U1.X_U11_U631.Yint)    0.0000          
+
+(X_U1.X_U11_U633.Yint)    0.0000      (X_U1.X_U11_U634.qint)    -.0100          
+
+(X_U1.X_U13_U613.INM1)    -.5520      (X_U1.X_U13_U613.INP1)    0.0000          
+
+(X_U1.X_U13_U613.INP2)     .0204      (X_U1.X_U13_U614.INM1)    -.6600          
+
+(X_U1.X_U13_U614.INP1)    0.0000      (X_U1.X_U13_U614.INP2)     .0204          
+
+(X_U1.X_U13_U616.YINT)    0.0000      (X_U1.X_U13_U617.YINT)    0.0000          
+
+(X_U1.X_U13_U618.YINT)    1.0000      (X_U1.X_U14_U612.YINT)    0.0000          
+
+(X_U1.X_U14_U613.YINT)    1.0000      (X_U1.X_U14_U648.YINT)    1.0000          
+
+(X_U1.X_U14_U650.YINT)    1.0000      (X_U1.X_U14_U651.YINT)    0.0000          
+
+(X_U1.X_U14_U652.YINT)    0.0000      (X_U1.X_U14_U653.YINT)    0.0000          
+
+(X_U1.X_U14_U655.YINT)    1.0000      (X_U1.X_U14_U657.YINT)    1.0000          
+
+(X_U1.X_U14_U685.YINT)    1.0000      (X_U1.X_U14_U687.YINT)    0.0000          
+
+(X_U1.X_U14_U688.YINT)    1.0000      (X_U1.X_U14_U690.qint)     .0100          
+
+(X_U1.X_U14_U691.YINT)    0.0000      (X_U1.X_U14_U692.YINT)    0.0000          
+
+(X_U1.X_U14_U693.INM1) 409.4E-27      (X_U1.X_U14_U693.INP1)    0.0000          
+
+(X_U1.X_U14_U693.INP2)    0.0000      (X_U1.X_U18_U143.meas)    0.0000          
+
+(X_U1.X_U18_U144.qint)    -.0100      (X_U1.X_U18_U145.YINT)    0.0000          
+
+(X_U1.X_U18_U27.YINT1)    1.0000      (X_U1.X_U18_U27.YINT2)    1.0000          
+
+(X_U1.X_U18_U27.YINT3)    0.0000      (X_U1.X_U18_U29.YINT1)    1.0000          
+
+(X_U1.X_U18_U29.YINT2)    1.0000      (X_U1.X_U18_U29.YINT3)    0.0000          
+
+(X_U1.X_U18_U30.YINT1)    1.0000      (X_U1.X_U18_U30.YINT2)    1.0000          
+
+(X_U1.X_U18_U30.YINT3)    0.0000      (X_U1.X_U2_U634.myvss)    0.0000          
+
+(X_U1.X_U2_U634.qqqd1)    0.0000      (X_U1.X_U4_U690.myvss)    0.0000          
+
+(X_U1.X_U4_U690.qqqd1)    0.0000      (X_U1.X_U5_U607.YINT1)    0.0000          
+
+(X_U1.X_U5_U607.YINT2)    0.0000      (X_U1.X_U5_U607.YINT3)    1.0000          
+
+(X_U1.X_U5_U610.YINT1)    0.0000      (X_U1.X_U5_U610.YINT2)    0.0000          
+
+(X_U1.X_U5_U610.YINT3)    1.0000      (X_U1.X_U5_U611.YINT1)    1.0000          
+
+(X_U1.X_U5_U611.YINT2)    1.0000      (X_U1.X_U5_U611.YINT3)    0.0000          
+
+(X_U1.X_U5_U614.YINT1)    0.0000      (X_U1.X_U5_U614.YINT2)    0.0000          
+
+(X_U1.X_U5_U614.YINT3)    1.0000      (X_U1.X_U5_U639.reset)    1.0000          
+
+(X_U1.X_U5_U640.myvss)    0.0000      (X_U1.X_U5_U640.qqqd1)    0.0000          
+
+(X_U1.X_U5_U641.myvss)    0.0000      (X_U1.X_U5_U641.qqqd1)    0.0000          
+
+(X_U1.X_U5_U642.reset)    1.0000      (X_U1.X_U98_U143.meas)    0.0000          
+
+(X_U1.X_U98_U676.INM1)    2.0000      (X_U1.X_U98_U676.INP1)    0.0000          
+
+(X_U1.X_U98_U676.INP2)    0.0000      (X_U1.X_U98_U677.Yint)    0.0000          
+
+(X_U1.X_U98_U678.Yint)    0.0000      (X_U1.X_U98_U679.Yint)    1.0000          
+
+(X_U1.X_U98_U680.YINT)    0.0000      (X_U1.X_UDRV1_U5.Yint)    1.0000          
+
+(X_U1.X_UDRV1_U6.Yint)    0.0000      (X_U1.X_UDRV2_U5.Yint)    1.0000          
+
+(X_U1.X_UDRV2_U6.Yint)    0.0000      (X_U1.U14_L_BLNCK_FPWM)    1.0000         
+
+(X_U1.U97_16PWM_COUNT1)    0.0000     (X_U1.U97_16PWM_COUNT2)    0.0000         
+
+(X_U1.UCLK1_DISCHARGEB)    1.0000     (X_U1.UCLK2_DISCHARGEB)    1.0000         
+
+(X_U1.UCLK2_SYNCCLKOUT)    1.0000     (X_U1.X_U11_U634.myvss)    0.0000         
+
+(X_U1.X_U11_U634.qqqd1)    0.0000     (X_U1.X_U14_U690.myvss)    0.0000         
+
+(X_U1.X_U14_U690.qqqd1)    0.0000     (X_U1.X_U18_U143.reset)    1.0000         
+
+(X_U1.X_U18_U144.myvss)    0.0000     (X_U1.X_U18_U144.qqqd1)    0.0000         
+
+(X_U1.X_U5_U30.x3.YINT)    0.0000     (X_U1.X_U5_U31.x3.YINT)    0.0000         
+
+(X_U1.X_U5_U639.reset2)    1.0000     (X_U1.X_U5_U642.reset2)    1.0000         
+
+(X_U1.X_U98_U143.reset)    1.0000     (X_U1.X_UCLK1_U704.my5)    1.0000         
+
+(X_U1.X_UCLK1_U704.qbr)    1.0000     (X_U1.X_UCLK1_U704.qqq)    -.0100         
+
+(X_U1.X_UCLK1_U716.my5)    5.0000     (X_U1.X_UCLK1_U716.qbr)    1.0000         
+
+(X_U1.X_UCLK1_U716.qqq) 10.00E-15     (X_U1.X_UCLK1_U838.my5)    1.0000         
+
+(X_U1.X_UCLK1_U838.qbr)    1.0000     (X_U1.X_UCLK1_U838.qqq)     .0100         
+
+(X_U1.X_UCLK2_U716.my5)    2.0000     (X_U1.X_UCLK2_U716.qbr)    2.0000         
+
+(X_U1.X_UCLK2_U716.qqq) 4.002E-15     (X_U1.X_UCLK2_U718.my5)    5.0000         
+
+(X_U1.X_UCLK2_U718.qbr)    1.0000     (X_U1.X_UCLK2_U718.qqq) 10.00E-15         
+
+(X_U1.X_UCLK2_U838.my5)    1.0000     (X_U1.X_UCLK2_U838.qbr)    1.0000         
+
+(X_U1.X_UCLK2_U838.qqq)     .0100     (X_U1.X_UDRV1_U629.my5)    1.0000         
+
+(X_U1.X_UDRV1_U629.qbr)    1.0000     (X_U1.X_UDRV1_U629.qqq)    -.0100         
+
+(X_U1.X_UDRV1_U847.my5)    1.0000     (X_U1.X_UDRV1_U847.qbr)    1.0000         
+
+(X_U1.X_UDRV1_U847.qqq)    -.0100     (X_U1.X_UDRV2_U629.my5)    1.0000         
+
+(X_U1.X_UDRV2_U629.qbr)    1.0000     (X_U1.X_UDRV2_U629.qqq)    -.0100         
+
+(X_U1.X_UDRV2_U847.my5)    1.0000     (X_U1.X_UDRV2_U847.qbr)    1.0000         
+
+(X_U1.X_UDRV2_U847.qqq)    -.0100     (X_U1.U5_COUNTER1_RESET)    0.0000        
+
+(X_U1.U5_COUNTER2_RESET)    0.0000    (X_U1.X_U18_U143.reset2)    1.0000        
+
+(X_U1.X_U2_U634.x3.YINT)    0.0000    (X_U1.X_U4_U690.x3.YINT)    0.0000        
+
+(X_U1.X_U5_U3_U618.YINT)    0.0000    (X_U1.X_U5_U4_U618.YINT)    0.0000        
+
+(X_U1.X_U5_U640.x3.YINT)    0.0000    (X_U1.X_U5_U641.x3.YINT)    0.0000        
+
+(X_U1.X_U98_U143.reset2)    1.0000    (X_U1.X_UCLK1_U131.Yint)    0.0000        
+
+(X_U1.X_UCLK1_U145.YINT)    0.0000    (X_U1.X_UCLK1_U146.YINT)    0.0000        
+
+(X_U1.X_UCLK1_U678.Yint)    0.0000    (X_U1.X_UCLK1_U679.Yint)    0.0000        
+
+(X_U1.X_UCLK1_U685.YINT)    0.0000    (X_U1.X_UCLK1_U690.YINT)    1.0000        
+
+(X_U1.X_UCLK1_U691.YINT)    1.0000    (X_U1.X_UCLK1_U695.YINT)    0.0000        
+
+(X_U1.X_UCLK1_U698.YINT)    1.0000    (X_U1.X_UCLK1_U699.YINT)    1.0000        
+
+(X_U1.X_UCLK1_U703.YINT)    1.0000    (X_U1.X_UCLK1_U704.qint)    -.0100        
+
+(X_U1.X_UCLK1_U705.YINT)    0.0000    (X_U1.X_UCLK1_U706.YINT)    0.0000        
+
+(X_U1.X_UCLK1_U708.YINT)    1.0000    (X_U1.X_UCLK1_U713.YINT)    1.0000        
+
+(X_U1.X_UCLK1_U714.YINT)    0.0000    (X_U1.X_UCLK1_U715.YINT)    0.0000        
+
+(X_U1.X_UCLK1_U716.qint) 10.00E-15    (X_U1.X_UCLK1_U836.YINT)    1.0000        
+
+(X_U1.X_UCLK1_U837.YINT)    0.0000    (X_U1.X_UCLK1_U838.qint)     .0100        
+
+(X_U1.X_UCLK1_U839.YINT)    1.0000    (X_U1.X_UCLK2_U131.Yint)    0.0000        
+
+(X_U1.X_UCLK2_U132.Yint)    0.0000    (X_U1.X_UCLK2_U133.Yint)    0.0000        
+
+(X_U1.X_UCLK2_U145.YINT)    0.0000    (X_U1.X_UCLK2_U146.YINT)    0.0000        
+
+(X_U1.X_UCLK2_U678.Yint)    0.0000    (X_U1.X_UCLK2_U679.Yint)    0.0000        
+
+(X_U1.X_UCLK2_U685.YINT)    0.0000    (X_U1.X_UCLK2_U690.YINT)    1.0000        
+
+(X_U1.X_UCLK2_U691.YINT)    1.0000    (X_U1.X_UCLK2_U695.YINT)    0.0000        
+
+(X_U1.X_UCLK2_U698.YINT)    1.0000    (X_U1.X_UCLK2_U699.YINT)    1.0000        
+
+(X_U1.X_UCLK2_U705.YINT)    0.0000    (X_U1.X_UCLK2_U708.YINT)    1.0000        
+
+(X_U1.X_UCLK2_U713.YINT)    1.0000    (X_U1.X_UCLK2_U714.YINT)    0.0000        
+
+(X_U1.X_UCLK2_U716.qint) 4.002E-15    (X_U1.X_UCLK2_U717.YINT)    0.0000        
+
+(X_U1.X_UCLK2_U718.qint) 10.00E-15    (X_U1.X_UCLK2_U836.YINT)    1.0000        
+
+(X_U1.X_UCLK2_U837.YINT)    0.0000    (X_U1.X_UCLK2_U838.qint)     .0100        
+
+(X_U1.X_UCLK2_U839.YINT)    1.0000    (X_U1.X_UDRV1_U629.qint)    -.0100        
+
+(X_U1.X_UDRV1_U825.YINT)    0.0000    (X_U1.X_UDRV1_U827.YINT)    0.0000        
+
+(X_U1.X_UDRV1_U828.YINT)    1.0000    (X_U1.X_UDRV1_U835.YINT)    1.0000        
+
+(X_U1.X_UDRV1_U841.YINT)    1.0000    (X_U1.X_UDRV1_U842.YINT)    0.0000        
+
+(X_U1.X_UDRV1_U847.qint)    -.0100    (X_U1.X_UDRV1_U848.INM1)-189.4E-12        
+
+(X_U1.X_UDRV1_U848.INP1)    0.0000    (X_U1.X_UDRV1_U848.INP2)     .0010        
+
+(X_U1.X_UDRV1_U849.YINT)    1.0000    (X_U1.X_UDRV2_U629.qint)    -.0100        
+
+(X_U1.X_UDRV2_U825.YINT)    0.0000    (X_U1.X_UDRV2_U827.YINT)    0.0000        
+
+(X_U1.X_UDRV2_U828.YINT)    1.0000    (X_U1.X_UDRV2_U835.YINT)    1.0000        
+
+(X_U1.X_UDRV2_U841.YINT)    1.0000    (X_U1.X_UDRV2_U842.YINT)    0.0000        
+
+(X_U1.X_UDRV2_U847.qint)    -.0100    (X_U1.X_UDRV2_U848.INM1)-189.4E-12        
+
+(X_U1.X_UDRV2_U848.INP1)    0.0000    (X_U1.X_UDRV2_U848.INP2)     .0010        
+
+(X_U1.X_UDRV2_U849.YINT)    1.0000    (X_U1.X_U10_U1_U828.YINT)    1.0000       
+
+(X_U1.X_U10_U2_U618.YINT)    0.0000   (X_U1.X_U10_U2_U620.YINT)    1.0000       
+
+(X_U1.X_U10_U2_U621.YINT)    0.0000   (X_U1.X_U10_U3_U618.YINT)    0.0000       
+
+(X_U1.X_U11_U634.x3.YINT)    0.0000   (X_U1.X_U13_U1_U828.YINT)    1.0000       
+
+(X_U1.X_U13_U2_U618.YINT)    0.0000   (X_U1.X_U13_U2_U620.YINT)    1.0000       
+
+(X_U1.X_U13_U2_U621.YINT)    0.0000   (X_U1.X_U13_U3_U618.YINT)    0.0000       
+
+(X_U1.X_U14_U690.x3.YINT)    0.0000   (X_U1.X_U18_U144.x3.YINT)    0.0000       
+
+(X_U1.X_U5_U3_U607.YINT1)    1.0000   (X_U1.X_U5_U3_U607.YINT2)    1.0000       
+
+(X_U1.X_U5_U3_U607.YINT3)    0.0000   (X_U1.X_U5_U4_U607.YINT1)    1.0000       
+
+(X_U1.X_U5_U4_U607.YINT2)    1.0000   (X_U1.X_U5_U4_U607.YINT3)    0.0000       
+
+(X_U1.X_UCLK1_U704.myvss)    0.0000   (X_U1.X_UCLK1_U704.qqqd1)    0.0000       
+
+(X_U1.X_UCLK1_U716.qqqd1)    0.0000   (X_U1.X_UCLK1_U838.myvss)    0.0000       
+
+(X_U1.X_UCLK1_U838.qqqd1)    0.0000   (X_U1.X_UCLK2_U716.myvss)    0.0000       
+
+(X_U1.X_UCLK2_U716.qqqd1)    0.0000   (X_U1.X_UCLK2_U718.qqqd1)    0.0000       
+
+(X_U1.X_UCLK2_U838.myvss)    0.0000   (X_U1.X_UCLK2_U838.qqqd1)    0.0000       
+
+(X_U1.X_UDRV1_U629.myvss)    0.0000   (X_U1.X_UDRV1_U629.qqqd1)    0.0000       
+
+(X_U1.X_UDRV1_U826.YINT1)    0.0000   (X_U1.X_UDRV1_U826.YINT2)    0.0000       
+
+(X_U1.X_UDRV1_U826.YINT3)    1.0000   (X_U1.X_UDRV1_U847.myvss)    0.0000       
+
+(X_U1.X_UDRV1_U847.qqqd1)    0.0000   (X_U1.X_UDRV2_U629.myvss)    0.0000       
+
+(X_U1.X_UDRV2_U629.qqqd1)    0.0000   (X_U1.X_UDRV2_U826.YINT1)    0.0000       
+
+(X_U1.X_UDRV2_U826.YINT2)    0.0000   (X_U1.X_UDRV2_U826.YINT3)    1.0000       
+
+(X_U1.X_UDRV2_U847.myvss)    0.0000   (X_U1.X_UDRV2_U847.qqqd1)    0.0000       
+
+(X_U1.X_U10_U2_U607.YINT1)    1.0000  (X_U1.X_U10_U2_U607.YINT2)    1.0000      
+
+(X_U1.X_U10_U2_U607.YINT3)    0.0000  (X_U1.X_U10_U2_U608.YINT1)    0.0000      
+
+(X_U1.X_U10_U2_U608.YINT2)    0.0000  (X_U1.X_U10_U2_U608.YINT3)    1.0000      
+
+(X_U1.X_U10_U3_U607.YINT1)    1.0000  (X_U1.X_U10_U3_U607.YINT2)    1.0000      
+
+(X_U1.X_U10_U3_U607.YINT3)    0.0000  (X_U1.X_U13_U2_U607.YINT1)    1.0000      
+
+(X_U1.X_U13_U2_U607.YINT2)    1.0000  (X_U1.X_U13_U2_U607.YINT3)    0.0000      
+
+(X_U1.X_U13_U2_U608.YINT1)    0.0000  (X_U1.X_U13_U2_U608.YINT2)    0.0000      
+
+(X_U1.X_U13_U2_U608.YINT3)    1.0000  (X_U1.X_U13_U3_U607.YINT1)    1.0000      
+
+(X_U1.X_U13_U3_U607.YINT2)    1.0000  (X_U1.X_U13_U3_U607.YINT3)    0.0000      
+
+(X_U1.X_UCLK1_U716.clkdel)    0.0000  (X_U1.X_UCLK1_U716.clkint)    0.0000      
+
+(X_U1.X_UCLK2_U718.clkdel)    0.0000  (X_U1.X_UCLK2_U718.clkint)    0.0000      
+
+(X_U1.X_UCLK1_U704.x3.YINT)    0.0000 (X_U1.X_UCLK1_U716.clkdel1)    0.0000     
+
+(X_U1.X_UCLK1_U716.x1.YINT)    0.0000 (X_U1.X_UCLK1_U716.x2.YINT)    0.0000     
+
+(X_U1.X_UCLK1_U838.x3.YINT)    0.0000 (X_U1.X_UCLK2_U716.x3.YINT)    0.0000     
+
+(X_U1.X_UCLK2_U718.clkdel1)    0.0000 (X_U1.X_UCLK2_U718.x1.YINT)    0.0000     
+
+(X_U1.X_UCLK2_U718.x2.YINT)    0.0000 (X_U1.X_UCLK2_U838.x3.YINT)    0.0000     
+
+(X_U1.X_UDRV1_U629.x3.YINT)    0.0000 (X_U1.X_UDRV1_U847.x3.YINT)    0.0000     
+
+(X_U1.X_UDRV2_U629.x3.YINT)    0.0000 (X_U1.X_UDRV2_U847.x3.YINT)    0.0000     
+
+(X_U1.X_UCLK1_U716.x3.YINT1)    0.0000                                          
+
+(X_U1.X_UCLK1_U716.x3.YINT2)    0.0000                                          
+
+(X_U1.X_UCLK1_U716.x3.YINT3)    0.0000                                          
+
+(X_U1.X_UCLK2_U718.x3.YINT1)    0.0000                                          
+
+(X_U1.X_UCLK2_U718.x3.YINT2)    0.0000                                          
+
+(X_U1.X_UCLK2_U718.x3.YINT3)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    X_U1.V_U2_V4  -1.250E-10
+    X_U1.V_U2_V8   0.000E+00
+    X_U1.V_U2_V6   0.000E+00
+    X_U1.V_U2_V5   0.000E+00
+    X_U1.V_U13_VUV_HYS   0.000E+00
+    X_U1.V_U13_V5  -2.000E-16
+    X_U1.V_U13_VOV   0.000E+00
+    X_U1.V_U13_VUV   0.000E+00
+    X_U1.V_U13_VOV_HYS   0.000E+00
+    X_U1.V_U11_V5   0.000E+00
+    X_U1.V_U11_V4  -1.250E-12
+    X_U1.V_U11_V6   0.000E+00
+    X_U1.V_U11_V8   0.000E+00
+    X_U1.V_U18_V5  -6.400E-11
+    X_U1.V_UDRV2_V1   0.000E+00
+    X_U1.V_UDRV2_V2   0.000E+00
+    X_U1.V_UDRV2_VILIM   0.000E+00
+    X_U1.V_U98_V12   0.000E+00
+    X_U1.V_U98_V10   0.000E+00
+    X_U1.V_U98_V13  -2.401E-12
+    X_U1.V_U98_V11   0.000E+00
+    X_U1.V_U19_V1  -2.495E+00
+    X_U1.V_U10_VUV_HYS   0.000E+00
+    X_U1.V_U10_V5  -2.000E-16
+    X_U1.V_U10_VOV   0.000E+00
+    X_U1.V_U10_VUV   0.000E+00
+    X_U1.V_U10_VOV_HYS   0.000E+00
+    X_U1.V_UEA2_VCLAMP_HIGH  -2.001E-12
+    X_U1.V_UEA2_VCLAMP_LOW   2.098E-14
+    X_U1.V_U14_V11   0.000E+00
+    X_U1.V_U14_V10   0.000E+00
+    X_U1.V_U97_V2  -3.200E-11
+    X_U1.V_U97_V1  -3.200E-11
+    X_U1.V_U7_V7   0.000E+00
+    X_U1.V_U7_V4   0.000E+00
+    X_U1.V_U7_V10   0.000E+00
+    X_U1.V_U7_V15   0.000E+00
+    X_U1.V_U7_V8   0.000E+00
+    X_U1.V_U7_V14   0.000E+00
+    X_U1.V_U7_V9   0.000E+00
+    X_U1.V_U7_V6   0.000E+00
+    X_U1.V_U7_V5   0.000E+00
+    X_U1.V_U7_V11   0.000E+00
+    X_U1.V_U4_V11   0.000E+00
+    X_U1.V_U4_V10   0.000E+00
+    X_U1.V_UCLK1_V47   0.000E+00
+    X_U1.V_UCLK1_V48   0.000E+00
+    X_U1.V_UCLK1_V45  -2.183E-11
+    X_U1.V_UCLK1_V7   8.324E-18
+    X_U1.V_UCLK1_V6  -2.001E-12
+    X_U1.V_UCLK1_V51   0.000E+00
+    X_U1.V_U5_V4   0.000E+00
+    X_U1.V_U5_V5   0.000E+00
+    X_U1.V_U5_V3   0.000E+00
+    X_U1.V_U5_V7  -1.000E-11
+    X_U1.V_U5_V9   0.000E+00
+    X_U1.V_U5_V2   0.000E+00
+    X_U1.V_U5_V8  -1.000E-11
+    X_U1.V_U5_V6   0.000E+00
+    X_U1.V_UDRV1_V1   0.000E+00
+    X_U1.V_UDRV1_V2   0.000E+00
+    X_U1.V_UDRV1_VILIM   0.000E+00
+    X_U1.V_UCLK2_V45   4.039E-06
+    X_U1.V_UCLK2_V48   0.000E+00
+    X_U1.V_UCLK2_V47   0.000E+00
+    X_U1.V_UCLK2_V55   0.000E+00
+    X_U1.V_UCLK2_V53   0.000E+00
+    X_U1.V_UCLK2_V51   0.000E+00
+    X_U1.V_UCLK2_V7   8.324E-18
+    X_U1.V_UCLK2_V54   0.000E+00
+    X_U1.V_UCLK2_V6  -2.001E-12
+    X_U1.V_UEA1_VCLAMP_HIGH  -2.001E-12
+    X_U1.V_UEA1_VCLAMP_LOW   2.098E-14
+    X_U1.X_U2_U634.v1  -1.011E-12
+    X_U1.X_U2_U634.v2  -5.677E-14
+    X_U1.X_U11_U634.v1  -1.011E-12
+    X_U1.X_U11_U634.v2  -5.677E-14
+    X_U1.X_U18_U144.v1  -1.011E-12
+    X_U1.X_U18_U144.v2  -5.677E-14
+    X_U1.X_UDRV2_U629.v1  -1.011E-12
+    X_U1.X_UDRV2_U629.v2  -5.677E-14
+    X_U1.X_UDRV2_U847.v1  -1.011E-12
+    X_U1.X_UDRV2_U847.v2  -5.677E-14
+    X_U1.X_U14_U690.v1  -9.910E-13
+    X_U1.X_U14_U690.v2   1.098E-14
+    X_U1.X_U99_H1.VH_U99_H1   0.000E+00
+    X_U1.X_U4_U690.v1  -9.910E-13
+    X_U1.X_U4_U690.v2   1.098E-14
+    X_U1.X_UCLK1_U704.v1  -1.011E-12
+    X_U1.X_UCLK1_U704.v2  -5.677E-14
+    X_U1.X_UCLK1_U716.v1  -5.001E-12
+    X_U1.X_UCLK1_U838.v1  -9.910E-13
+    X_U1.X_UCLK1_U838.v2   1.098E-14
+    X_U1.X_U5_U31.v1  -1.001E-12
+    X_U1.X_U5_U31.v2   2.776E-27
+    X_U1.X_U5_U30.v1  -1.001E-12
+    X_U1.X_U5_U30.v2   2.776E-27
+    X_U1.X_U5_U641.v1  -1.001E-12
+    X_U1.X_U5_U641.v2   2.776E-27
+    X_U1.X_U5_U640.v1  -1.001E-12
+    X_U1.X_U5_U640.v2   2.776E-27
+    X_U1.X_UDRV1_U629.v1  -1.011E-12
+    X_U1.X_UDRV1_U629.v2  -5.677E-14
+    X_U1.X_UDRV1_U847.v1  -1.011E-12
+    X_U1.X_UDRV1_U847.v2  -5.677E-14
+    X_U1.X_UCLK2_U716.v1  -2.001E-12
+    X_U1.X_UCLK2_U716.v2   5.549E-27
+    X_U1.X_UCLK2_U718.v1  -5.001E-12
+    X_U1.X_UCLK2_U838.v1  -9.910E-13
+    X_U1.X_UCLK2_U838.v2   1.098E-14
+
+    TOTAL POWER DISSIPATION   6.24E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 03/05/26 00:03:30 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-steadyState"  [ c:\users\wfe\documents\automotive_dcdc\sims-pspicefiles\schematic1\steadystate.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =        2.83
+
