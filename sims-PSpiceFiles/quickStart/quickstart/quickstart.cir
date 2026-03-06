@@ -1,0 +1,22 @@
+** Profile: "quickStart-quickstart"  [ C:\Users\WFE\Documents\automotive_dcdc\sims-PSpiceFiles\quickStart\quickstart.sim ] 
+
+** Creating circuit file "quickstart.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\cds_spb_home\cdssetup\OrCAD_PSpiceTIPSpice_Install\23.1.0\PSpice.ini file:
+.lib "nom_pspti.lib" 
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 3000ns 0 
+.OPTIONS ADVCONV
+.OPTIONS FILEMODELSEARCH
+.PROBE64 N([VIN])
+.PROBE64 N([VOUT])
+.INC "..\quickStart.net" 
+
+
+.END

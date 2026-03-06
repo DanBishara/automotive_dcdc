@@ -1,0 +1,38 @@
+* source SIMS
+X_U1         0 COMP COMP N00744 N00303 VDDA VDDA VIN VIN 0 FB1 0 N00720 N00272
++  N00724 N00283 N00728 N00287 N00736 N00299 N00736 N00299 VDDA N00752 N00311 0 0
++  N00772 N00776 SS SS SW1 SW2 N05504 VCC VCC N00268 VDDA VIN VOUT VOUT
++  LM5143-Q1_TRANS PARAMS: MODE=0
+C_C1         0 SS  100n  TC=0,0 
+C_C2         0 N00772  470n  TC=0,0 
+R_R1         0 N00776  158k TC=0,0 
+R_R2         N00728 N00724  1 TC=0,0 
+R_R3         N00283 N00287  1 TC=0,0 
+C_C3         0 VCC  4.4u  TC=0,0 
+D_D1         VCC N00720 Dbreak 
+C_C4         SW1 N00720  470n  TC=0,0 
+D_D2         VCC N00272 Dbreak 
+C_C5         SW2 N00272  470n  TC=0,0 
+M_M1         VIN N00287 SW2 SW2 power_Mbreakn           
+M_M2         SW2 N00299 0 0 power_Mbreakn           
+L_L1         SW2 N00303  5u  
+R_R4         N00303 VOUT  1.4m TC=0,0 
+C_C7         0 VOUT  100u  TC=0,0 
+C_C8         0 VOUT  100u  TC=0,0 
+L_L2         SW1 N00744  5u  
+R_R5         N00744 VOUT  1.4m TC=0,0 
+M_M3         VIN N00728 SW1 SW1 power_Mbreakn           
+M_M4         SW1 N00736 0 0 power_Mbreakn           
+R_R6         FB1 VOUT  215k TC=0,0 
+R_R7         0 FB1  11.3k TC=0,0 
+C_C9         0 N04006  47n  TC=0,0 
+C_C10         0 COMP  1n  TC=0,0 
+R_R8         N04006 COMP  2.49k TC=0,0 
+C_C11         0 VDDA  470n  TC=0,0 
+V_V1         VIN 0 35Vdc
+C_C12         0 VIN  400u  TC=0,0 
+R_R9         0 N00752  1000k TC=0,0 
+R_R10         N00311 0  1000k TC=0,0 
+R_R11         0 N05504  1000k TC=0,0 
+C_C13         N00268 0  2.2u  TC=0,0 
+V_V2         N00268 0 5Vdc
