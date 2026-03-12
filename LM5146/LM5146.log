@@ -1,0 +1,20 @@
+LTspice 26.0.1 for Windows
+Circuit: C:\Users\WFE\Documents\automotive_dcdc\LM5146\LM5146.net
+Start Time: Wed Mar 11 14:19:01 2026
+solver = Normal
+Maximum thread count: 16
+tnom = 27
+temp = 27
+method = modified trap
+d_d1: Emission coefficient, N=0.01, too small, this might lead to numerical problems.
+d_d2: Emission coefficient, N=0.001, too small, this might lead to numerical problems.
+Direct Newton iteration succeeded in finding operating point.
+
+Simulation stopped by user.
+Total elapsed time: 382.346 seconds.
+
+Files loaded:
+C:\Users\WFE\Documents\automotive_dcdc\LM5146\LM5146.net
+C:\Users\WFE\AppData\Local\LTspice\lib\cmp\standard.mos
+C:\Users\WFE\Documents\automotive_dcdc\LM5146\LM5146_TRANS.lib
+
