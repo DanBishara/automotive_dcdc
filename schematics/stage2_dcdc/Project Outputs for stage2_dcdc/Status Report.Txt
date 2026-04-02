@@ -1,11 +1,22 @@
-Output: Generates pick and place files
-Type  : Pick Place
+Output: Gerber Files
+Type  : Gerber
 From  : Variant [[No Variations]] of Project [stage2_dcdc.PrjPcb]
-   Generated File[Pick Place for dcdc.txt]
-   Generated File[Pick Place for dcdc.csv]
+   Generated File[dcdc.GTO]
+   Generated File[dcdc.GTP]
+   Generated File[dcdc.GTS]
+   Generated File[dcdc.GTL]
+   Generated File[dcdc.G1]
+   Generated File[dcdc.G2]
+   Generated File[dcdc.GBL]
+   Generated File[dcdc.GBS]
+   Generated File[dcdc.GBP]
+   Generated File[dcdc.GBO]
+   Generated File[dcdc.GM]
+   Generated File[dcdc.EXTREP]
+   Generated File[dcdc.REP]
 
 
-Files Generated   : 2
+Files Generated   : 13
 Documents Printed : 0
 
-Finished Output Generation At 3:17:51 PM On 2026-03-16
+Finished Output Generation At 6:02:57 PM On 2026-04-02

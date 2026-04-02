@@ -1,7 +1,7 @@
 Protel Design System Design Rule Check
 PCB File : C:\Users\WFE\Documents\automotive_dcdc\schematics\stage2_dcdc\dcdc.PcbDoc
-Date     : 2026-03-16
-Time     : 2:26:15 PM
+Date     : 2026-04-02
+Time     : 5:41:03 PM
 
 Processing Rule : Clearance Constraint (Gap=0.102mm) (All),(All)
 Rule Violations :0
@@ -36,7 +36,9 @@ Processing Rule : Hole Size Constraint (Min=0.2mm) (Max=6.3mm) (All)
 Rule Violations :2
 
 Processing Rule : Hole To Hole Clearance (Gap=0.25mm) (All),(All)
-Rule Violations :0
+   Violation between Hole To Hole Clearance Constraint: (Collision < 0.25mm) Between Pad Free-26(107.026mm,67.625mm) on Multi-Layer And Pad Free-28(107.026mm,67.625mm) on Multi-Layer Pad/Via Touching Holes
+   Violation between Hole To Hole Clearance Constraint: (Collision < 0.25mm) Between Pad Free-26(109.056mm,2.625mm) on Multi-Layer And Pad Free-28(109.056mm,2.625mm) on Multi-Layer Pad/Via Touching Holes
+Rule Violations :2
 
 Processing Rule : Minimum Solder Mask Sliver (Gap=0mm) (All),(All)
 Rule Violations :0
@@ -57,6 +59,6 @@ Processing Rule : Height Constraint (Min=0mm) (Max=1816.048mm) (Prefered=12.7mm)
 Rule Violations :0
 
 
-Violations Detected : 2
+Violations Detected : 4
 Waived Violations : 0
 Time Elapsed        : 00:00:01

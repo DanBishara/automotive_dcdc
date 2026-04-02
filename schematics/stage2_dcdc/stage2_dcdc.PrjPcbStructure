@@ -1,0 +1,3 @@
+Record=TopLevelDocument|FileName=Overview.SchDoc|SheetNumber=1
+Record=SheetSymbol|SourceDocument=Overview.SchDoc|Designator=Buck|SchDesignator=Buck|FileName=LM5146.SchDoc|SheetNumber=2|SymbolType=Normal|RawFileName=LM5146.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=SheetSymbol|SourceDocument=Overview.SchDoc|Designator=Conectors|SchDesignator=Conectors|FileName=connectors.SchDoc|SheetNumber=3|SymbolType=Normal|RawFileName=connectors.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 

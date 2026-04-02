@@ -48,27 +48,24 @@ Used DCodes :
 *************************************************************
 
 *************************************************************
-Generating : Bottom Solder
-      File : dcdc.GBS
+Generating : Layer 1
+      File : dcdc.G1
 
-    Adding Layer      : Bottom Solder
-
-    Adding Layer      : Bottom Layer
+    Adding Layer      : Layer 1
 
     Adding Layer      : Multi-Layer
 
 
 Used DCodes :
-    D40
-    D41
-    D42
-    D43
-    D44
-    D45
-    D46
-    D47
-    D48
     D49
+    D57
+    D58
+    D59
+    D60
+    D61
+    D63
+    D64
+    D65
 *************************************************************
 
 *************************************************************
@@ -115,58 +112,8 @@ Used DCodes :
 *************************************************************
 
 *************************************************************
-Generating : Bottom Overlay
-      File : dcdc.GBO
-
-    Adding Layer      : Bottom Overlay
-
-
-Used DCodes :
-*************************************************************
-
-*************************************************************
-Generating : Top Overlay
-      File : dcdc.GTO
-
-    Adding Layer      : Top Overlay
-
-
-Used DCodes :
-    D10
-    D11
-    D12
-    D13
-    D14
-    D15
-*************************************************************
-
-*************************************************************
-Generating : Bottom Layer
-      File : dcdc.GBL
-
-    Adding Layer      : Bottom Layer
-
-    Adding Layer      : Multi-Layer
-
-
-Used DCodes :
-    D14
-    D15
-    D49
-    D57
-    D58
-    D59
-    D60
-    D61
-    D62
-    D63
-    D64
-    D65
-*************************************************************
-
-*************************************************************
 Generating : Layer 2
-      File : dcdc.GP2
+      File : dcdc.G2
 
     Adding Layer      : Layer 2
 
@@ -174,36 +121,25 @@ Generating : Layer 2
 
 
 Used DCodes :
-    D66
-    D67
-    D68
-    D69
-    D70
-    D71
-    D72
-    D73
-    D74
+    D49
+    D57
+    D58
+    D59
+    D60
+    D61
+    D63
+    D64
+    D65
 *************************************************************
 
 *************************************************************
-Generating : Layer 1
-      File : dcdc.GP1
+Generating : Bottom Overlay
+      File : dcdc.GBO
 
-    Adding Layer      : Layer 1
-
-    Adding Layer      : Multi-Layer
+    Adding Layer      : Bottom Overlay
 
 
 Used DCodes :
-    D66
-    D67
-    D68
-    D69
-    D70
-    D71
-    D72
-    D73
-    D74
 *************************************************************
 
 *************************************************************
@@ -257,11 +193,75 @@ Used DCodes :
 *************************************************************
 
 *************************************************************
+Generating : Bottom Solder
+      File : dcdc.GBS
+
+    Adding Layer      : Bottom Solder
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D40
+    D41
+    D42
+    D43
+    D44
+    D45
+    D46
+    D47
+    D48
+    D49
+*************************************************************
+
+*************************************************************
+Generating : Bottom Layer
+      File : dcdc.GBL
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D14
+    D15
+    D49
+    D57
+    D58
+    D59
+    D60
+    D61
+    D62
+    D63
+    D64
+    D65
+*************************************************************
+
+*************************************************************
+Generating : Top Overlay
+      File : dcdc.GTO
+
+    Adding Layer      : Top Overlay
+
+
+Used DCodes :
+    D10
+    D11
+    D12
+    D13
+    D14
+    D15
+*************************************************************
+
+*************************************************************
 Generating : Profile
       File : dcdc.GM
 
 
 Used DCodes :
-    D75
+    D66
 *************************************************************
 
